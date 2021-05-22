@@ -1,3 +1,10 @@
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
 class Solution:
     def isBalanced(self, root):
         """
@@ -18,4 +25,3 @@ class Solution:
         if abs(leftData[1] - rightData[1]) > 1:
             return False, 0
         return True, max(leftData[1], rightData[1]) + 1
-

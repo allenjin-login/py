@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # RL
     avl_tree = create_avl_tree(
-        deque([40, 30, 456, 3, 2, 429, 4, 2222, 1, 4, 6, 4, 20, 80, 10, 30, 60, 90, 50, 70, 85, 95]))
+        deque([40, 30, 456, 3, 2, 429, 4, 2222, 1, 4, 6,5,6,7,7,7,12,3,4,4443,333, 4, 20, 80, 10, 30, 60, 90, 50, 70, 85, 95]))
     avl_tree.show_BSTree_1()
     avl_tree = insert_avl_tree(avl_tree, 55)
     avl_tree.show_BSTree_1()

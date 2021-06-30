@@ -59,6 +59,7 @@ class fraction:
         return fraction(new_num, new_den)
 
     def __sub__(self, other):
+        global new_den, new_num
         if self.den == other.den:
             new_den = self.den
             new_num = self.num - other.num
@@ -74,6 +75,7 @@ class math_method:
     def hcf(x, y):
         """该函数返回两个数的最大公约数"""
         # 获取最小值
+        global hcf
         if x > y:
             smaller = y
         else:
@@ -82,7 +84,6 @@ class math_method:
             if (x % i == 0) and (y % i == 0):
                 hcf = i
         return hcf
-
     def gcd(m, n):
         while m % n != 0:
             old_m = m
@@ -91,21 +92,16 @@ class math_method:
             m = old_m
             n = old_m % old_n
         return n
-
     def gongbei(a, b, int_t=None):
         def gongyue(a, b):
             """
             欧几里得算法----辗转相除法
-
             :param a: 第一个数
-
             :param b: 第二个数
-
             :return: 最大公约数
-
             """
             # 如果最终余数为0 公约数就计算出来了
-            while (b != 0):
+            while b != 0:
                 temp = a % b
                 a = b
                 b = temp
@@ -127,3 +123,7 @@ class math_method:
         l.append(fraction(int(new_a_num), int(new_a_den)))
         l.append(fraction(int(new_b_num), int(new_b_den)))
         return l
+
+    def change_fraction(self,input_int):
+        return fraction(input_int,1)
+

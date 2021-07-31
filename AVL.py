@@ -154,5 +154,6 @@ class TreeNode:
                 if self.isLeftChild():
                     self.parent.leftChild = self.leftChild
                 else:
-                    self.parent.rightChild
+                    self.parent.rightChild = self.rightChild
+                self.rightChild.parent = self.parent
 
